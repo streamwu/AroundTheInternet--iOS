@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yeW-BC-vbR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ZEI-kt-tRn">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="yeW-BC-vbR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JGa-mP-juR">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="5fN-PR-ofG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3aO-mC-Smn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="-33"/>
+        </scene>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="GEv-4R-Yor">
+            <objects>
+                <viewController storyboardIdentifier="SplashScreenViewController" id="93h-GN-jRf" customClass="SplashScreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dth-UL-smD"/>
+                        <viewControllerLayoutGuide type="bottom" id="P7d-If-du1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D5E-Qk-FZ2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="277" translatesAutoresizingMaskIntoConstraints="NO" id="szq-nz-p09">
+                                <rect key="frame" x="22" y="29" width="277" height="411"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Around the Internet">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <font key="NSFont" size="58" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYi-RZ-GtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-395" y="652"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AO1-ou-Zp6"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Kb-UI-WBb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HYB-Jw-Uxd"/>
+                    <connections>
+                        <segue destination="rBB-HL-Yvt" kind="push" identifier="segueToWebViewController" id="gwc-7E-5mH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="-33"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="aY9-VL-svo">
+            <objects>
+                <viewController id="rBB-HL-Yvt" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i2P-0A-Gsc"/>
+                        <viewControllerLayoutGuide type="bottom" id="oBA-cO-Hnf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vmx-VD-dzz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3C-eO-fX4">
+                                <rect key="frame" x="0.0" y="61" width="320" height="463"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8eH-8o-OBK">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="refresh" id="d6i-8J-tFP">
+                                        <connections>
+                                            <action selector="refreshTapped:" destination="rBB-HL-Yvt" id="LEF-LU-NcD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="99" systemItem="fixedSpace" id="gf1-MK-dde">
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="rewind" id="CKY-5q-K3q">
+                                        <connections>
+                                            <action selector="rewindTapped:" destination="rBB-HL-Yvt" id="mCl-AT-oxW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="96" style="plain" systemItem="fixedSpace" id="s1d-KP-Tbz">
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="mLw-AG-xq3">
+                                        <connections>
+                                            <action selector="forwardTapped:" destination="rBB-HL-Yvt" id="xc6-tC-0eG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="jEc-6P-sng">
+                        <barButtonItem key="rightBarButtonItem" image="twitter.png" id="CaH-Dp-RiO">
+                            <connections>
+                                <action selector="sentTweet:" destination="rBB-HL-Yvt" id="sRY-yQ-LRS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="toolBar" destination="8eH-8o-OBK" id="9l2-Dl-8U8"/>
+                        <outlet property="webView" destination="E3C-eO-fX4" id="4hH-W6-LAU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ze-jO-1Ni" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493" y="-38"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="twitter.png" width="30" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
